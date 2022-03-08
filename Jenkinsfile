@@ -3,7 +3,7 @@ pipeline {
     stages{
     stage("Git Checkout"){
          steps{
-            git credentialsId: 'github', '
+            git credentialsId: 'github',https://github.com/csowji/cmrproject.git  '
         }
         }
     stage("Maven Build"){
@@ -13,9 +13,9 @@ pipeline {
              }
      stage("Building image"){
          steps{
-            sh "docker build -t cmr-repo/myapp:1.0 ."
-            sh "docker run -dt cmr-repo/myapp:1.0 /bin/bash"
-            sh "docker tag cmr-repo/myapp:1.0 dharanig746/cmr-repo:1.0"
+            sh "docker build -t cmrproject-repo/myapp:1.0 ."
+            sh "docker run -dt cmrproject-repo/myapp:1.0 /bin/bash"
+            sh "docker tag cmrproject-repo/myapp:1.0 dharanig746/cmr-repo:1.0"
             sh "docker push dharanig746/cmr-repo:1.0"
                     }
                   }
