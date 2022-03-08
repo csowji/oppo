@@ -1,9 +1,9 @@
 pipeline {
      agent any
      stages{
-        stage("git") {
-            step('github',https://github.com/csowji/cmrproject.git')
-                 }
+          stage("git") {
+             step('github',https://github.com/csowji/cmrproject.git')
+          }
          stage("maven build"){
             step('mvn clean install')
          }
