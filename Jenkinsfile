@@ -2,7 +2,7 @@ pipeline {
      agent any
      stages{
         stage("git") {
-            step('git credentialsId: 'github',https://github.com/csowji/cmrproject.git')
+            step('github',https://github.com/csowji/cmrproject.git')
                  }
          stage("maven build"){
             step('mvn clean install')
