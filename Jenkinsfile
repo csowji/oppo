@@ -4,7 +4,7 @@ pipeline {
     stage("Git Checkout"){
          steps{
             git credentialsId: 'github',https://github.com/csowji/cmrproject.git'
-        }
+         }
         }
     stage("Maven Build"){
          steps{
