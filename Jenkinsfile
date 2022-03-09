@@ -8,9 +8,9 @@ pipeline {
           }
          stage("maven build"){
           steps{
-                   sh'mvn clean install'
-          }
-          }
+              sh'mvn clean install'
+                 }
+                }
          stage("build image"){
           steps{
              sh "docker build -t cmrproject-repo/myapp:1.0 ."
