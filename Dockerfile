@@ -1,2 +1,2 @@
-FROM Tomcat
-COPY /var/lib/jenkins/workspace/project_pipeline/targets/my-app1.0-SNAPSHOT.jar /var/lib/tomcat9/webapps/my-app1.0-SNAPSHOT.jar        
+FROM tomcat:9.0
+COPY target/my-app-1.0-SNAPSHOT.jar /usr/local/tomcat9/webapps/my-app-1.0-SNAPSHOT.jar        
